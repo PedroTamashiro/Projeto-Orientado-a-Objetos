@@ -1,0 +1,17 @@
+import { facade } from "./Facade"
+
+export class interfaceWEB {
+    private Facade: facade
+
+    constructor(){
+        this.Facade = new facade()
+    }    
+    public matriculaWEB(codAluno, codCurso, turma){
+        this.Facade.matricular(codAluno, codCurso, turma)
+        console.log("Matriculado via WEB")
+    }
+    public exibirStatus(turma){
+        this.Facade.exibirStatus(turma)
+        console.log("conferido via WEB")
+    }
+}
